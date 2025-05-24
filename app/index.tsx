@@ -24,6 +24,7 @@ export default function Index() {
         </Text>
 
         <ScrollView style={styles.scrollArea} contentContainerStyle={styles.scrollBotoes}>
+
           <Link href="/sobre" asChild>
             <TouchableOpacity style={styles.botao}>
               <Text style={styles.textoBotao}>Sobre o app</Text>
@@ -119,10 +120,10 @@ const styles = StyleSheet.create({
   botao: {
     width: "100%",
     backgroundColor: "#d2bfa3",
-    paddingVertical: 12,
+    paddingVertical: 10,
     borderRadius: 10,
     alignItems: "center",
-    marginTop: 12,
+    marginTop: 10,
   },
   textoBotao: {
     fontSize: 12,
