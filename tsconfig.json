@@ -13,5 +13,5 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
-, "components/Container.jsx", "app/bullsandcows.jsx", "app/index.jsx", "app/academica.jsx", "app/habilidades.jsx", "app/sobre.jsx", "app/profissional.jsx", "app/projetos.jsx"  ]
+, "components/Container.jsx", "app/bullsandcows.jsx", "app/index.tsx", "app/academica.jsx", "app/habilidades.jsx", "app/sobre.jsx", "app/profissional.jsx", "app/projetos.jsx"  ]
 }

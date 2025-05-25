@@ -1,6 +1,5 @@
-import { View, Text, StyleSheet, TouchableOpacity, TextInput, Alert, ScrollView, Keyboard, TouchableWithoutFeedback} from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, TextInput, Alert, ScrollView } from "react-native";
 import { Link } from "expo-router";
-import { Container } from "../components/Container";
 import { Fundo } from "../components/Fundo"
 import React, { useState } from 'react';
 
@@ -60,7 +59,7 @@ export default function BullsAndCows(){
 
   return (
     <Fundo>
-      <Container>
+      <View style={styles.container}>
         <Text style={styles.title}>Bulls & Cows</Text>
         <Text style={styles.descricao}>Tente adivinhar a senha secreta! {"\n"}
         Regras: senha de no máximo quatro dígitos, número de "bulls" sendo os dígitos na posição correta e "cows" os números corretos, mas na posição errada. {"\n"}
@@ -69,6 +68,7 @@ export default function BullsAndCows(){
         <TextInput
           style={styles.input}
           placeholder="Digite um número de 4 dígitos"
+          placeholderTextColor="#a88c6b"
           value={palpite}
           onChangeText={setPalpite}
           keyboardType="numeric"
@@ -79,14 +79,9 @@ export default function BullsAndCows(){
           <Text style={styles.textoBotao}>Tentar</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.botao} onPress={Keyboard.dismiss}>
-          <Text style={styles.textoBotao}>Fechar teclado</Text>
-        </TouchableOpacity>
-
         <TouchableOpacity style={styles.botao} onPress={() => mostrarSenha(numeroSecreto)}>
           <Text style={styles.textoBotao}>Mostrar senha</Text>
         </TouchableOpacity>
-
 
         <Text style={styles.subtitulo}>Tentativas:</Text>
         <ScrollView>
@@ -103,12 +98,22 @@ export default function BullsAndCows(){
                 <Text style={styles.textoBotao}>Início</Text>
             </TouchableOpacity>
         </Link>
-      </Container>
+      </View>
     </Fundo>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    height: "100%",
+    backgroundColor: "#a88e74",
+    borderRadius: 24,
+    padding: 24,
+    width: "100%",
+    alignItems: "center",
+    shadowOpacity: 0.2,
+    shadowRadius: 10,
+  },
   title: {
     fontSize: 22,
     fontWeight: "bold",
@@ -133,7 +138,7 @@ const styles = StyleSheet.create({
   input: {
     width: "100%",
     backgroundColor: "#efe0c9",
-    height: 30,
+    height: 50,
     borderRadius: 20,
     paddingLeft: 10,
   },
