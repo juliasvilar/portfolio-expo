@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, SafeAreaView } from "react-native";
+import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, SafeAreaView, Linking } from "react-native";
 import { Link } from "expo-router";
 import { StatusBar } from "react-native";
 import { Fundo } from "../components/Fundo"
@@ -69,6 +69,24 @@ export default function Index() {
             </TouchableOpacity>
           </Link>
         </ScrollView>
+
+        <Text style={styles.subtitulo}>Encontre-me!</Text>
+
+        <View style={styles.imagens}>
+
+          <TouchableOpacity
+            onPress={() => Linking.openURL("https://github.com/juliasvilar")}>
+            <Image source={require("../assets/images/github-mark.png")} style={styles.png}></Image>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            onPress={() => Linking.openURL("https://www.linkedin.com/in/juliasvilar/")}>
+            <Image source={require("../assets/images/linkedin.png")} style={styles.png}></Image>
+          </TouchableOpacity>
+
+        </View>
+
+
       </Container>
     </Fundo>
   );
@@ -79,20 +97,19 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#e9e1d8",
   },
-  infos: {
-    backgroundColor: "#a88e74",
-    borderRadius: 24,
-    padding: 24,
-    width: "100%",
-    alignItems: "center",
-    shadowOpacity: 0.2,
-    shadowRadius: 10,
-  },
   imagem: {
     width: 120,
     height: 120,
     borderRadius: 65,
     marginBottom: 20,
+  },
+  imagens: {
+    flexDirection: 'row',
+  },
+  png: {
+    width: 40,
+    height: 40,
+    marginHorizontal: 10
   },
   title: {
     fontSize: 22,
@@ -118,6 +135,7 @@ const styles = StyleSheet.create({
     maxHeight: 200,
     width: "100%",
     marginTop: 12,
+    marginBottom: 15
   },
   scrollBotoes: {
     paddingBottom: 10,

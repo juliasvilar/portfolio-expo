@@ -1,5 +1,7 @@
 import { View, Text, StyleSheet, TouchableOpacity, FlatList } from "react-native";
 import { Link } from "expo-router";
+import { Fundo } from "../components/Fundo"
+import { Container } from "../components/Container";
 
 export default function Sobre() {
   
@@ -8,14 +10,17 @@ export default function Sobre() {
     { key: "→ Expo" },
     { key: "→ Expo Router" },
     { key: "→ TypeScript" },
-    { key: "→ JavaScript" },
+    { key: "→ JavaScript" }
   ];
 
   return (
-    <View style={styles.container}>
-      <View style={styles.infos}>
+    <Fundo>
+      <Container>
 
         <Text style={styles.title}>Sobre o App</Text>
+
+        <Text style={styles.descricao}>Aplicativo desenvolvido para a disciplina de Programação Web e Mobile. {"\n"}
+        Meu portfólio em formato Mobile! :3</Text>
 
         <Text style={styles.subtitulo}>Ferramentas de desenvolvimento</Text>
 
@@ -33,40 +38,30 @@ export default function Sobre() {
             </TouchableOpacity>
         </Link>
 
-      </View>
-    </View>
+      </Container>
+    </Fundo>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#e9e1d8",
-    padding: 30,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  infos: {
-    backgroundColor: "#a88e74",
-    borderRadius: 24,
-    padding: 24,
-    width: "100%",
-    alignItems: "center",
-    shadowOpacity: 0.2,
-    shadowRadius: 10,
-  },
   title: {
     fontSize: 22,
     fontWeight: "bold",
     color: "#3d2a1c",
-    marginBottom: 30,
+    marginBottom: 15
   },
   subtitulo: {
     fontSize: 16,
     color: "#3d2a1c",
     marginBottom: 16,
-    textAlign: "left",
+    alignSelf: "flex-start",
     fontWeight: "bold",
+  },
+    descricao: {
+    fontSize: 14,
+    color: "#3d2a1c",
+    textAlign: "center",
+    marginBottom: 17,
   },
   bold: {
     fontWeight: "bold",
