@@ -8,7 +8,8 @@ export default function Profissional() {
       <View style={styles.infos}>
 
         <Text style={styles.title}>Experiência profissional</Text>
-        <Text style={styles.descricao}>Ops :c Infelizmente ainda não tenho nenhuma experiência profissional!</Text>
+        <Text style={styles.descricao}>Ops :c {"\n"}
+        Infelizmente ainda não tenho nenhuma experiência profissional!</Text>
 
 
         <Link href="/" asChild>
