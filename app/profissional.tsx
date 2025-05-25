@@ -45,21 +45,11 @@ const styles = StyleSheet.create({
     color: "#3d2a1c",
     marginBottom: 30,
   },
-  subtitulo: {
-    fontSize: 16,
-    color: "#3d2a1c",
-    marginBottom: 16,
-    textAlign: "left",
-    fontWeight: "bold",
-  },
   descricao: {
     fontSize: 14,
     color: "#3d2a1c",
     textAlign: "center",
     marginBottom: 12,
-  },
-  bold: {
-    fontWeight: "bold",
   },
   botao: {
     width: "100%",

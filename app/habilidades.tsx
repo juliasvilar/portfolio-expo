@@ -87,8 +87,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: "#3d2a1c",
     marginBottom: 16,
-    textAlign: "left",
     fontWeight: "bold",
+    alignSelf: "flex-start"
   },
   botao: {
     width: "100%",
@@ -109,12 +109,12 @@ const styles = StyleSheet.create({
     color: "#3d2a1c",
     borderRadius: 10,
     textAlign: "left",
-    marginBottom: 3,
+    marginBottom: 1,
     width: "100%",
     marginLeft: 5
   },
   lista: {
     width: "100%",
-    marginBottom: 16,
+    marginBottom: 10,
   },
 });

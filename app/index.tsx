@@ -1,10 +1,18 @@
-import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from "react-native";
+import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, SafeAreaView } from "react-native";
 import { Link } from "expo-router";
+import { StatusBar } from "react-native";
+import { Fundo } from "../components/Fundo"
+import { Container } from "../components/Container";
 
 export default function Index() {
+
+  <SafeAreaView style={styles.safeArea}>
+    <StatusBar backgroundColor="#e9e1d8" barStyle="dark-content"></StatusBar>
+  </SafeAreaView>
+
   return (
-    <View style={styles.container}>
-      <View style={styles.infos}>
+    <Fundo>
+      <Container>
         <Image
           source={require("../assets/images/julia.jpg")}
           style={styles.imagem}
@@ -61,18 +69,15 @@ export default function Index() {
             </TouchableOpacity>
           </Link>
         </ScrollView>
-      </View>
-    </View>
+      </Container>
+    </Fundo>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  safeArea: {
     flex: 1,
     backgroundColor: "#e9e1d8",
-    padding: 30,
-    justifyContent: "center",
-    alignItems: "center",
   },
   infos: {
     backgroundColor: "#a88e74",

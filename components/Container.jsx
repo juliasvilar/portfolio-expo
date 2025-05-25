@@ -10,10 +10,13 @@ export function Container({ children }) {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: "#e9e1d8",
-    padding: 30,
-    justifyContent: "center",
+    maxHeight: "100%",
+    backgroundColor: "#a88e74",
+    borderRadius: 24,
+    padding: 24,
+    width: "100%",
     alignItems: "center",
+    shadowOpacity: 0.2,
+    shadowRadius: 10,
   },
 });
